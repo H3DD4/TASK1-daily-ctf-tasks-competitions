@@ -142,9 +142,9 @@ One of the players found an other approach to solve the task be exploiting the w
    print('Candidates:', candidates)
    ```
 
-   - **Possible passwords:** `['SpongeBoB', 'Wishbone', ...]`
+   - **Possible passwords:** `['SpongeBoB', 'wishbone', ...]`
 
-4. **Verify** by substituting **Wishbone** in `decrypt.py` and rerunning; you get the identical flag.
+4. **Verify** by substituting **wishbone** in `decrypt.py` and rerunning; you get the identical flag.
 
 ---
 
