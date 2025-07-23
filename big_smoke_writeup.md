@@ -44,7 +44,7 @@ The prompt and the weird constant `b13s5v3_r10v_17mgr7n3g3ss_` hinted at an inpu
 
 #### 2.2 Decompilation
 
-I used an online decompiler (since the binary was small) and obtained the following key excerpts:
+I used an online decompiler (since the binary was small) and obtained the following key excerpts (check the online_decompiler.png):
 
 ```c
 // Rolling-hash on "Ryder" to get seed:
@@ -167,6 +167,7 @@ This produces a valid PNG:
 ```
 file _big_smoke_traitor_decrypted.png
 # PNG image data, 3840 x 2160, 8-bit/color RGB, non-interlaced
+so the flag was in the png , check the flag.png file 
 ```
 
 
