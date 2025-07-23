@@ -40,7 +40,7 @@ GCC: (Debian 14.2.0-19) 14.2.0
 .shstrtab
 ```
 
-The prompt and the weird constant `b13s5v3_r10v_17mgr7n3g3ss_` hinted at an input check,t seemed to be worthless because it made no sense, thats way we should look for the source code to understand what were facing .
+The prompt and the weird constant `b13s5v3_r10v_17mgr7n3g3ss_` hinted at an input check,is seemed to be worthless because it made no sense, thats way we should look for the source code to understand what were facing .
 
 #### 2.2 Decompilation
 
@@ -136,7 +136,7 @@ Recovered key: m1ss1ng_gr0v3_57r337_v1b3s
 
 ### 4. Decrypting the Data File
 
-after ovtaining a key , i remembered about the `.dat` file so i started thinkin about ways to use this key in the recover and the first idea i though about is that the file was likely XORed with this key, so i tried a simple XOR:
+after obtaining a key , i remembered about the `.dat` file so i started thinkin about ways to use this key in the recover and the first idea i though about is that the file was likely XORed with this key, so i tried a simple XOR:
 
 ```bash
 cat << 'EOF' > xor_decrypt.py
