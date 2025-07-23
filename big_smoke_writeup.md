@@ -16,12 +16,12 @@ _big_smoke_traitor_.dat  cj
    file cj
    # Output: ELF 64-bit LSB PIE executable, stripped
    ```
-2. The `cj` binary appeared to be a stripped ELF (reverse engineering target). The `.dat` file was likely encrypted or corrupted data.
+2. The `cj` binary appeared to be a stripped ELF (reverse engineering target). The `.dat` file was likely encrypted or corrupted data that we should recover.
 
 ### 2. Inspecting the ELF (`cj`)
 
 #### 2.1 Strings
-
+soo in initial investigations i chekced strings at this elf file , maybe we could find a interresting constant or some valuable .rodata 
 Running `strings cj` revealed:
 
 ```
@@ -40,7 +40,7 @@ GCC: (Debian 14.2.0-19) 14.2.0
 .shstrtab
 ```
 
-The prompt and the weird constant `b13s5v3_r10v_17mgr7n3g3ss_` hinted at an input check.
+The prompt and the weird constant `b13s5v3_r10v_17mgr7n3g3ss_` hinted at an input check,t seemed to be worthless because it made no sense, thats way we should look for the source code to understand what were facing .
 
 #### 2.2 Decompilation
 
@@ -136,7 +136,7 @@ Recovered key: m1ss1ng_gr0v3_57r337_v1b3s
 
 ### 4. Decrypting the Data File
 
-Realizing the `.dat` file was likely XORed with this key, we apply a simple XOR:
+after ovtaining a key , i remembered about the `.dat` file so i started thinkin about ways to use this key in the recover and the first idea i though about is that the file was likely XORed with this key, so i tried a simple XOR:
 
 ```bash
 cat << 'EOF' > xor_decrypt.py
@@ -166,11 +166,8 @@ This produces a valid PNG:
 
 ```
 file _big_smoke_traitor_decrypted.png
-# PNG image data, 3840 x 2160, 8-bit/color RGB, non-interlaced
-so the flag was in the png , check the flag.png file 
+# PNG image data, 3840 x 2160, 8-bit/color RGB, non-interlaced 
 ```
 
-
-
-The flag is embedded in the image itself, completing the challenge.
+so were succesfully found a png file , and the flag was right in this picture ( open the flag.png file)
 
