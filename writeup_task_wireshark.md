@@ -50,8 +50,9 @@ Applied this display filter to isolate all exfil packets:
 ```wireshark
 dns.qry.type == 16
 (DNS type 16 = TXT)
-
-
+```
+![filtering TXT packets](images/capture_pic3.png)
+```
 Now we have every packet carrying a Base64 fragment.
 
 🧩 Step 4 – Reassemble & Decode
