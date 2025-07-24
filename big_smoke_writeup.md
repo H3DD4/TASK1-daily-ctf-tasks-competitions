@@ -1,6 +1,6 @@
 ## Write-up: *big\_smoke\_traitor* Challenge
 
-This write-up details the steps to solve the `_big_smoke_traitor_` challenge, which consisted of two files in `~/bcg/output`:
+This write-up details the steps to solve the `_big_smoke_traitor_` challenge, which consisted of two files :
 
 ```
 _big_smoke_traitor_.dat  cj
